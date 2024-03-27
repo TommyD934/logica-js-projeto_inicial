@@ -1,4 +1,3 @@
-
 alert("bem vindo ao jogo");
 
 let numeroSecreto = Math.floor(Math.random() * 51);
