@@ -18,3 +18,15 @@ while (Tentativas > 0 ) {
     alert(`você ainda tem  ${Tentativas} Tentativas `)
     Tentativas = Tentativas - 1;
 }
+    if (Tentativas === 4) {
+        alert(`Suas tentativas acabaram`);
+    }else {
+        alert(`você ainda tem ${4 - Tentativas} tentativas`)
+}
+let palavraTentativa = Tentativas > 1 ? `Tentativas` : `Tentativas`
+if (Tentativas < 4) {
+    alert(`você descobriu o número secreto em ${Tentativas} ${palavraTentativa}`)
+
+}
+
+for(let Tentativas = 0; tentativas <6; Tentativas++){}
