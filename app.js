@@ -1,42 +1,42 @@
 
-function iniciar() {
-    alert("bem vindo ao jogo");
-    let numerodealeatorizar = parseInt(prompt('quamtos numeros você quer aleatorizar'))
+function começar() {
+   
+alert("bom dia, bem vindo ao jogo")
+ 
+let numeroDePosições = parseInt(prompt(`quantos numeros você quer aleatorizar`))
 
-    function numeroAnf(index) {
-        return Math.floor(Math.random() * index + 1);
-
-    }
-    let numeroescoooo = numeroAnf(numerodealeatorizar)
-
-    for (let Tentativas = 0; Tentativas < numerodetentativas;  Tentativas++) {
-
-        let numeroEscolhido = parseInt(prompt(`digite um numero de 1 a ${numerodealeatorizar}`));
-
-        if (numeroescoooo === numeroEscolhido){
-            
-            alert(`parabens voce acertou o numero ${numeroEscolhido}`);
-            break;
-        } else if (numeroEscolhido > numeroescoooo) {
-            alert(`voce digitou um maior que o númeo secreto`);
-        } else {
-            alert(`voce digitou um menor que o numero Secreto`);
-        };
-        alert(`você ainda tem  ${Tentativas} Tentativas `)
-    }
-    if (Tentativas === numerodetentativas) {
-        alert(`Suas tentativas acabaram`);
-         
-    } else if (Tentativas <= numerodetentativas) {
-
-        alert(`você ainda tem ${numerodetentativas - Tentativas - 1 } tentativas`);
-
-    } else {
-
-        (`você ainda tem ${numerodetentativas - Tentativas - 1 } Tentativas`);
-        let numerodetentativas = tentativas > 1 ? 'tentativas' : 'tentativa';
-        if(tentativas < 4){
-            alert(`Você acertou com ${Tentativas} ${numerodetentativas}`)
-    }
-  }
+function numeroAleatorio(index){
+ 
+   return Math.floor(Math.random() *index + 1)
+ 
 }
+ 
+let numeroSecreto = numeroAleatorio(numeroDePosições)
+ 
+for(let numeroTentativas = 0; numeroTentativas < 5; numeroTentativas++){
+ 
+    let numeroEscolhido = parseInt(prompt(`digite um numero de 1 a ${numeroDePosições}`));
+ 
+    if(numeroSecreto == numeroEscolhido){
+            alert(`parabéns você acertou o numero ${numeroSecreto} `)
+            break
+        }else if(numeroEscolhido > numeroSecreto) {
+ 
+            alert(`voce digitou ${numeroEscolhido} que é um numero maior que o numero secreto`)
+        }else{
+            alert(`voce digitou ${numeroEscolhido} que é um numero menor que o numero secreto`)
+        }
+        if (numeroTentativas === 3){
+            alert(`suas tentativas acabaram`)
+            break
+        }else if (numeroTentativas < 4) {
+            alert(`voce ainda tem ${2 - numeroTentativas} tentativas `)
+        }else{
+            alert(`voce ainda tem ${2 - numeroTentativas} tentativas`)
+        }
+}
+ 
+}
+
+var anos = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
+console.log(anos[0]);
