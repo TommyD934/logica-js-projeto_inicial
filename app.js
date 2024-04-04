@@ -1,42 +1,40 @@
-
-function começar() {
-   
-alert("bom dia, bem vindo ao jogo")
- 
-let numeroDePosições = parseInt(prompt(`quantos numeros você quer aleatorizar`))
-
-function numeroAleatorio(index){
- 
-   return Math.floor(Math.random() *index + 1)
- 
+function gerarNumeroAle(index){
+    return Math.floor(Math.random() * index + 1);
 }
- 
-let numeroSecreto = numeroAleatorio(numeroDePosições)
- 
-for(let numeroTentativas = 0; numeroTentativas < 5; numeroTentativas++){
- 
-    let numeroEscolhido = parseInt(prompt(`digite um numero de 1 a ${numeroDePosições}`));
- 
-    if(numeroSecreto == numeroEscolhido){
-            alert(`parabéns você acertou o numero ${numeroSecreto} `)
-            break
-        }else if(numeroEscolhido > numeroSecreto) {
- 
-            alert(`voce digitou ${numeroEscolhido} que é um numero maior que o numero secreto`)
-        }else{
-            alert(`voce digitou ${numeroEscolhido} que é um numero menor que o numero secreto`)
+
+let listaNumeros = [];
+
+function jogo () {
+    let numeroDePosi = parseInt(prompt('Quantos númeos você quer aleatorizar'))
+    let numeroDeTentativas = 3
+    let numeroSecreto = gerarNumeroAle(numeroDePosi);
+
+    for(let tentativas = 0; tentativas < numeroDeTentativas; tentativas++){
+        listaNumeros[tentativas] = parseInt(prompt(`Digite um número de 1 a ${numeroDePosi}`));
+
+        if(listaNumeros[tentativas] === numeroSecreto){
+            alert('Parabéns, você acertou!');
+            break;
+        } else if(listaNumeros[tentativas] > numeroSecreto){
+            alert('Você digitou um número maior que o número secreto');
+        } else {
+            alert('Você digitou um número menor que o número secreto');
         }
-        if (numeroTentativas === 3){
-            alert(`suas tentativas acabaram`)
-            break
-        }else if (numeroTentativas < 4) {
-            alert(`voce ainda tem ${2 - numeroTentativas} tentativas `)
+        if(tentativas === numeroDeTentativas){
+            alert(`Suas tentativas acabaram`);
+        } else if (tentativas <= numeroDeTentativas){
+            alert(`você ainda tem  ${numeroDeTentativas - tentativas - 1} tentativas`);   
         }else{
-            alert(`voce ainda tem ${2 - numeroTentativas} tentativas`)
-        }
-}
- 
-}
+            alert(`você ainda tem  ${numeroDePosi - tentativas - 1} tentativa`);
+        }    
+    }
+    alert(`Os números que você chutou são: ${listaNumeros[0]}, ${listaNumeros[1]} e ${listaNumeros[2]}` )
+    let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
+    if(tentativas < numeroDeTentativas){
+        alert(`Você acertou com ${tentativas} ${palavraTentativa}`)
+    }
+} 
 
-var anos = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
-console.log(anos[0]);
+function clicou() {
+    jogo();
+}
