@@ -1,6 +1,6 @@
 let H = 0
 
-function clicou(){
+function clico(){
    H++;
     alert(`você clicou ${H}`)
 
