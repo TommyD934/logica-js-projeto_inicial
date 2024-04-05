@@ -4,7 +4,7 @@ function gerarNumeroAle(index){
 
 let listaNumeros = [];
 
-function jogo () {
+function joji () {
     let numeroDePosi = parseInt(prompt('Quantos númeos você quer aleatorizar'))
     let numeroDeTentativas = 3
     let numeroSecreto = gerarNumeroAle(numeroDePosi);
@@ -36,5 +36,5 @@ function jogo () {
 } 
 
 function clicou() {
-    jogo();
+    joji();
 }
