@@ -6,7 +6,7 @@ let listaNumeros = [];
 
 function joji () {
     let numeroDePosi = parseInt(prompt('Quantos númeos você quer aleatorizar'))
-    let numeroDeTentativas = 3
+    let numeroDeTentativas = 5
     let numeroSecreto = gerarNumeroAle(numeroDePosi);
 
     for(let tentativas = 0; tentativas < numeroDeTentativas; tentativas++){
@@ -28,7 +28,7 @@ function joji () {
             alert(`você ainda tem  ${numeroDePosi - tentativas - 1} tentativa`);
         }    
     }
-    alert(`Os números que você chutou são: ${listaNumeros[0]}, ${listaNumeros[1]} e ${listaNumeros[2]}` )
+    alert(`Os números que você chutou são: ${listaNumeros[0]}, ${listaNumeros[1]} e ${listaNumeros[2]} ${listaNumeros[3]}${listaNumeros[4]}` )
     let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
     if(tentativas < numeroDeTentativas){
         alert(`Você acertou com ${tentativas} ${palavraTentativa}`)
