@@ -1,4 +1,4 @@
-                  //    0 ,1 ,2
+
 let listaNumerosdigitados = [];
                           
 for (let i = 0; i < 10; i++) {             

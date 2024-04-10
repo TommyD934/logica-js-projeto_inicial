@@ -1,7 +1,9 @@
-function vogal(letra){
-    if (letra == `a` || `e` || `i` || `o` || `u`) {
-    alert(`a ${letra}é uma vogal`)
-    }else{
-        alert(`sua ${letra} não é uma vogal`)
-    }
+let digitealetra = prompt("Insira uma letra")
+
+let letrasVogais = ["a", "e", "i", "o", "u"]
+
+if (letrasVogais.indexOf(digitealetra.toLowerCase()) !== -1) {
+  alert("sua letra é uma Vogal")
+} else {
+  alert("sua letra é uma Consoante")
 }
